@@ -23,22 +23,44 @@ h1{font-size:1.6rem;text-align:center;font-weight:normal}h2{font-size:1.2rem;mar
 .tl-item{position:relative;margin-bottom:14px;padding-left:12px}.tl-item::before{content:"";position:absolute;left:-14px;top:5px;width:10px;height:10px;border-radius:50%;background:var(--bg);border:3px solid var(--ink)}
 .tl-item.must::before{background:var(--coral)}.tl-time{font-size:.8rem;opacity:.7}.tl-title{font-size:1rem}
 .must-badge{display:inline-block;background:var(--coral);font-size:.65rem;padding:1px 5px;border-radius:999px;border:1.5px solid var(--ink);margin-left:4px}
-.hotel-item{border-left:5px solid var(--green);padding:6px 0 6px 12px;margin-bottom:10px}
+.hotel-item{border-left:5px solid var(--green);padding:8px 0 8px 12px;margin-bottom:14px;font-size:.92rem;line-height:1.55}
 .tag{display:inline-block;font-size:.7rem;padding:1px 6px;border-radius:999px;border:1.5px solid var(--ink);margin:3px 3px 0 0}
 .tag.train{background:var(--blue)}.tag.bus{background:var(--yellow)}.tag.walk{background:var(--green)}.tag.food{background:var(--coral)}
-.todo-list{list-style:none}.todo-list li{margin-bottom:8px;display:flex;gap:8px}
+.todo-list{list-style:none}.todo-list li{margin-bottom:10px;display:flex;gap:8px;align-items:flex-start}
+.todo-list label{flex:1}
 footer{text-align:center;font-size:.85rem;opacity:.6;margin-top:28px}a{color:inherit}
 table{width:100%;border-collapse:collapse;font-size:.78rem}th,td{border:1.5px solid #3E3A39;padding:4px;text-align:left}
 </style></head><body>
 <nav><a href="#home">首頁</a><a href="#flights">航班</a><a href="#hotels">住宿</a><a href="#itinerary">行程</a><a href="#todo">待辦</a></nav>
 <main>
 <section id="home" class="card" style="text-align:center"><h1>2026 冬日日本行</h1><p style="opacity:.8">日光・長野・東京</p><div class="countdown" id="countdown">出發倒數計算中...</div><p>12/09 成田 → 12/21 返台</p></section>
-<section id="flights" class="card"><h2>航班</h2><p>去程 12/09 MM620 桃園00:55→成田06:30（6F/6E）</p><p>回程 12/21 MM627 成田22:05→桃園00:50+1</p></section>
-<section id="hotels" class="card"><h2>住宿</h2>
-<div class="hotel-item"><strong>花庵</strong> 12/09-11 BNH202612090040rkt</div>
-<div class="hotel-item"><strong>Cypress</strong> 12/11-12 IK1732548303／824EFE4ED52D31B</div>
-<div class="hotel-item"><strong>東橫INN長野</strong> 12/12-15 5554318868 含早</div>
-<div class="hotel-item"><strong>Super Hotel錦糸町</strong> 12/15-21 6083964708 含早</div>
+<section id="flights" class="card"><h2>航班</h2><p>去程 12/09 Peach MM620 桃園00:55→成田06:30（座位 6F/6E）</p><p>回程 12/21 Peach MM627 成田22:05→桃園00:50+1</p></section>
+<section id="hotels" class="card"><h2>住宿一覽</h2>
+<div class="hotel-item"><strong>日光中禪寺湖溫泉 ホテル花庵</strong><br>
+12/09（三）～12/11（五）・2 晚<br>
+スタンダードツイン（禁煙）・素泊まり（不含餐）<br>
+預約編號：BNH202612090040rkt<br>
+〒321-1661 日光市中宮祠2480<br>
+TEL 0288-51-0105</div>
+<div class="hotel-item"><strong>Hotel Cypress Karuizawa（賽普拉斯輕井澤）</strong><br>
+12/11（五）～12/12（六）・1 晚<br>
+標準雙床房（禁菸）・不含餐<br>
+預訂號碼：IK1732548303<br>
+驗證碼：824EFE4ED52D31B<br>
+預計到達：18:00（入住15:00～23:00／退房～10:00）<br>
+〒389-0104 長野縣北佐久郡輕井澤町輕井澤東287-1<br>
+TEL +81-267-42-0011<br>
+輕井澤站步行約12分／計程車約3分</div>
+<div class="hotel-item"><strong>東橫INN 長野站善光寺口</strong><br>
+12/12（六）～12/15（二）・3 晚<br>
+雙人房（禁菸）・含早餐<br>
+確認碼：5554318868<br>
+Minami-ishidou-cho 1315-8, 長野</div>
+<div class="hotel-item"><strong>Super Hotel 東京錦糸町站前</strong><br>
+12/15（二）～12/21（一）・6 晚<br>
+經濟雙人房・含早餐<br>
+確認碼：6083964708<br>
+墨田區錦糸町 1-4-12</div>
 </section>
 <section id="itinerary" class="card"><h2>每日行程</h2>
 <input type="radio" name="day" id="d0" class="day-radios" checked>
@@ -59,10 +81,22 @@ table{width:100%;border-collapse:collapse;font-size:.78rem}th,td{border:1.5px so
 </div>
 <div id="days-root">載入詳細行程中…</div>
 </section>
-<section id="todo" class="card"><h2>待辦</h2><ul class="todo-list">
-<li><input type="checkbox" id="t1"><label for="t1">下載東京迪士尼 App</label></li>
-<li><input type="checkbox" id="t2"><label for="t2">下載寶可夢 App</label></li>
-<li><input type="checkbox" id="t3"><label for="t3">確認東京廣域周遊券</label></li>
+<section id="todo" class="card"><h2>出發前待辦</h2>
+<ul class="todo-list">
+<li><input type="checkbox" id="t1"><label for="t1">下載東京迪士尼 App 並加入門票</label></li>
+<li><input type="checkbox" id="t2"><label for="t2">確認 Peach 線上報到</label></li>
+<li><input type="checkbox" id="t3"><label for="t3">換日幣 / Suica・PASMO</label></li>
+<li><input type="checkbox" id="t4"><label for="t4">準備冬裝與溫泉用品</label></li>
+<li><input type="checkbox" id="t5"><label for="t5">確認各飯店入住時間</label></li>
+<li><input type="checkbox" id="t6"><label for="t6">下載離線地圖與翻譯 App</label></li>
+<li><input type="checkbox" id="t7"><label for="t7">準備伴手禮清單</label></li>
+<li><input type="checkbox" id="t8"><label for="t8">充電線、行動電源</label></li>
+<li><input type="checkbox" id="t9"><label for="t9">預約12/14戶隱觀光特急巴士（highwaybus.com）</label></li>
+<li><input type="checkbox" id="t10"><label for="t10">預訂 PokéPark KANTO 門票（12/16・全預約制）</label></li>
+<li><input type="checkbox" id="t11"><label for="t11">下載 PokéPark KANTO 官方 App（取號碼牌／看等候）</label></li>
+<li><input type="checkbox" id="t12"><label for="t12">預訂12/15 かがやき指定席（約11:12）</label></li>
+<li><input type="checkbox" id="t13"><label for="t13">購買 SNOW MONKEY PASS（長電版・12/13）</label></li>
+<li><input type="checkbox" id="t14"><label for="t14">確認東京廣域周遊券取票方式（成田）</label></li>
 </ul></section>
 <footer>2026 冬日日本行</footer></main>
 <script>
