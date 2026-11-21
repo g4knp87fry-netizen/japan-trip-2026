@@ -66,14 +66,16 @@ table{width:100%;border-collapse:collapse;font-size:0.8rem}th,td{border:1.5px so
 </ul></section>
 <footer>2026 冬日日本行</footer>
 </main>
-<script src="days_detail.js"></script>
+<script src="itin1.js"></script>
+<script src="itin2.js"></script>
 <script>
 (function(){
   var root=document.getElementById('days-root');
   if(!root) return;
-  if(window.ITIN_HTML){ root.outerHTML=window.ITIN_HTML; }
+  var html=(window.ITIN_P1||'')+(window.ITIN_P2||'');
+  if(html){ root.outerHTML=html; }
   else {
-    root.innerHTML='<p>詳細行程載入中。若持續失敗請開：<a href="https://cdn.jsdelivr.net/gh/g4knp87fry-netizen/japan-trip-2026@7206e3a/index.html">完整備份</a></p>';
+    root.innerHTML='<p>詳細行程載入中。備份：<a href="https://cdn.jsdelivr.net/gh/g4knp87fry-netizen/japan-trip-2026@7206e3a/index.html">完整舊版</a></p>';
   }
 })();
 function updateCountdown(){const t=new Date('2026-12-09T00:55:00+08:00');const n=new Date();const d=t-n;if(d<=0){document.getElementById('countdown').textContent='旅程進行中';return}const days=Math.floor(d/(1000*60*60*24));const hours=Math.floor((d%(1000*60*60*24))/(1000*60*60));document.getElementById('countdown').textContent='距離出發還有 '+days+' 天 '+hours+' 小時'}
